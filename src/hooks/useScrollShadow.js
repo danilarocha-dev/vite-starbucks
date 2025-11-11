@@ -1,4 +1,3 @@
-// src/hooks/useScrollShadow.js
 import { useState, useEffect } from 'react';
 
 /**

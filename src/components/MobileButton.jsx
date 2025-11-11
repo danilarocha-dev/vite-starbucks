@@ -1,4 +1,3 @@
-// src/components/MobileButton.jsx
 import React from 'react';
 
 /**
@@ -10,7 +9,16 @@ import React from 'react';
 const MobileButton = ({ isOpen, onClick }) => {
   return (
     <button
-      className="btn btn-mobile text-2xl text-gray-700 md:hidden" // Esconde em telas 'md' ou maiores
+      className="bg-transparent
+      py-2.5
+      px-5
+      border-none
+      rounded-lg
+      cursor-pointer
+      font-semibold
+      transition-colors duration-300 ease-in-out
+      text-2xl
+      md:hidden" // Esconde em telas 'md' ou maiores
       onClick={onClick}
       aria-label="Abrir menu"
       aria-expanded={isOpen}

@@ -1,4 +1,3 @@
-// src/hooks/useToggleMenu.js
 import { useState, useCallback } from 'react';
 
 /**

@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import { Poppins } from 'next/font/google'; // Exemplo, pode ser importado de outra forma
 export default {
   content: [
     "./index.html",
