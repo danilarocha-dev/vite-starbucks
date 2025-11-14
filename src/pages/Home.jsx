@@ -1,5 +1,6 @@
 import React from 'react';
 import backgroundHome from '../img/background-home.png';
+import homeDetail from '../img/detail.png';
 
 
 function Home() {
@@ -17,7 +18,16 @@ function Home() {
       "
     >
 
-      {/* .home-title */}      <h1
+      {/* .home-image */}
+      <img
+        src={homeDetail}
+        alt="Starbucks Drink"
+        className="
+        w-[clamp(300px,50%,400px)]" /* width: clamp(300px, 50%, 400px) */
+      />
+
+      {/* .home-title */}
+      <h1
         className="
           text-color-neutral-8                /* color: var(--color-neutral-8) */
           text-center                         /* text-align: center */
