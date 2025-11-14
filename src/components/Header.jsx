@@ -53,7 +53,8 @@ const Header = () => {
           text-base 
           font-semibold 
           rounded-lg 
-          transition-colors duration-300 ease-in-out text-2xl 
+          transition-colors duration-300 ease-in-out 
+          text-2xl 
           hover:bg-primary-2 md:block"
         >
           Contratar
