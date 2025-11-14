@@ -23,23 +23,26 @@ function Home() {
         src={homeDetail}
         alt="Starbucks Drink"
         className="
-        w-[clamp(300px,50%,400px)]" /* width: clamp(300px, 50%, 400px) */
+        w-[clamp(320px,50%,450px)]
+        mt-7"
       />
 
       {/* .home-title */}
-      <h1
-        className="
-          text-color-neutral-8                /* color: var(--color-neutral-8) */
-          text-center                         /* text-align: center */
-          text-[clamp(3rem,5vw,4.3rem)]      /* font-size: clamp(3rem, 5vw, 4.3rem) */
-          uppercase                           /* text-transform: uppercase */
-          leading-[1.2]                       /* line-height: 1.2 */
-          max-w-[700px]                       /* max-width: 700px */
+      <h1 className="
+          text-neutral-8
+          text-center
+          text-[clamp(3rem,5vw,4.3rem)]
+          uppercase
+          leading-[1.2]
+          max-w-[700px]
+          mt-7
+          font-semibold
         "
       >
         Mais que café, uma{' '}
         {/* span */}
-        <span className="text-color-primary-1"> {/* color: var(--color-primary-1) */ }
+        <span className="
+        text-primary-1">
           experiência.
         </span>
       </h1>
@@ -47,11 +50,11 @@ function Home() {
       {/* .home-description */}
       <p
         className="
-          text-color-neutral-9                /* color: var(--color-neutral-9) */
-          text-center                         /* text-align: center */
-          text-base                           /* font-size: 1rem */
-          font-medium                         /* font-weight: 500 */
-          max-w-[600px]                       /* max-width: 600px */
+          text-neutral-9
+          text-center
+          text-base
+          font-medium
+          max-w-[600px]
         "
       >
         Descubra cafés icônicos, sabores únicos e a energia perfeita para cada
