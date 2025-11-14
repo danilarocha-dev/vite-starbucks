@@ -17,7 +17,12 @@ const Header = () => {
     <header
       id="header"
       className={`
-        font-poppins bg-neutral-1 py-3 px-[4%] sticky top-0 z-10 
+        font-poppins 
+        bg-neutral-1 
+        py-3 px-[4%] 
+        sticky 
+        top-0 
+        z-10 
         transition-shadow duration-300 ease-in-out
         ${hasShadow ? 'shadow-lg' : 'shadow-none'} 
       `}
@@ -37,7 +42,19 @@ const Header = () => {
         {/* Adicionei estilos Tailwind para replicar um .btn-default */}
         <a
           href="#"
-          className="hidden bg-primary-1 text-neutral-0 py-2.5 px-5 border-none cursor-pointer text-base font-semibold rounded-lg transition-colors duration-300 ease-in-out text-2xl hover:bg-primary-2 md:block"
+          className="
+          hidden 
+          bg-primary-1 
+          text-neutral-0 
+          py-2.5 
+          px-5 
+          border-none 
+          cursor-pointer 
+          text-base 
+          font-semibold 
+          rounded-lg 
+          transition-colors duration-300 ease-in-out text-2xl 
+          hover:bg-primary-2 md:block"
         >
           Contratar
         </a>

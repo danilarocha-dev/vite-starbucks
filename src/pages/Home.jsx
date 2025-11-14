@@ -13,10 +13,9 @@ function Home() {
         min-h-[calc(100vh-96px)]
         pb-8 px-[4%]
         pt-[clamp(0px,5vw,32px)]
-        bg-contain bg-no-repeat bg-center
+        bg-cover bg-no-repeat bg-center
       "
     >
-      
 
       {/* .home-title */}      <h1
         className="
