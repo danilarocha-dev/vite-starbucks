@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 /**
  * @param {object} props - Propriedades recebidas pelo componente.
@@ -6,10 +6,10 @@ import React from 'react';
  */
 const NavLinks = ({ isOpen }) => {
   const links = [
-    { href: '#home', label: 'Home' },
-    { href: '#trending', label: 'Em alta' },
-    { href: '#abaut', label: 'Sobre nós' },
-    { href: '#products', label: 'Novidades' },
+    { to: '/', label: 'Home' },
+    { to: '/trending', label: 'Em alta' },
+    { to: '/about', label: 'Sobre nós' },
+    { to: '/products', label: 'Novidades' },
   ];
 
   return (
@@ -26,9 +26,9 @@ const NavLinks = ({ isOpen }) => {
       `}
     >
       {links.map((link) => (
-        <li key={link.href} className="text-center">
-          <a
-            href={link.href}
+        <li key={link.to} className="text-center">
+          <Link
+            to={link.to}
             className="
               text-neutral-8 no-underline text-base font-medium 
               transition-all duration-300 ease-in-out
@@ -36,7 +36,7 @@ const NavLinks = ({ isOpen }) => {
             "
           >
             {link.label}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

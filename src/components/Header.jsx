@@ -1,12 +1,8 @@
 import React from 'react';
-// Importando os hooks
 import { useToggleMenu } from '../hooks/useToggleMenu';
 import { useScrollShadow } from '../hooks/useScrollShadow';
-
-// Importando os sub-componentes
 import MobileButton from './MobileButton';
 import NavLinks from './NavLinks';
-
 // Importando a imagem (caminho relativo)
 import logoSrc from '../img/logo-starbucks.png';
 
