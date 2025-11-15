@@ -1,5 +1,8 @@
 import React from 'react';
 import backgroundTrending from '../img/background-mobile.png';
+import TrendingCard from '../components/TrendingCard';
+
+
 
 function Trending() {
   return (
@@ -40,7 +43,7 @@ function Trending() {
         </span>
         </h2>
 
-      
+      <TrendingCard />
 
     </section>
   );

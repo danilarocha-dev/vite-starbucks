@@ -1,25 +1,30 @@
 import React from 'react'
+import imgCard1 from '../img/trending/card1.png';
+import imgCard2 from '../img/trending/card2.png';
+import imgCard3 from '../img/trending/card3.png';
 
-function TrendingCard({ imgSrc, imgAlt, rating, title, subtitle }) {
+const TrendingCard = () => {
   return (
-    <div className="bg-gray-100 rounded-lg shadow-md p-4 relative overflow-hidden transition-transform hover:scale-105">
-      <img src={imgSrc} alt={imgAlt} className="w-full rounded-lg mb-4" />
-      
-      {/* Selo de Nota */}
-      <div className="absolute top-6 right-6 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm">
-        <p className="font-bold flex items-center gap-1 text-gray-800">
-          {rating}
-          <FaStar className="text-yellow-500" />
-        </p>
-      </div>
+    <section>
+     
+     <img
+     src={imgCard1}
+     alt='card1'
+      />
 
-      {/* Descrição */}
-      <p className="text-xl font-semibold text-gray-900">
-        {title}
-        <span className="block text-base font-normal text-gray-600">{subtitle}</span>
-      </p>
-    </div>
-  );
+      <img
+     src={imgCard2}
+     alt='card1'
+      />
+
+      <img
+     src={imgCard3}
+     alt='card1'
+      />
+     
+
+    </section>
+  )
 }
 
 export default TrendingCard
