@@ -10,7 +10,10 @@ function Home() {
       id="home"
       style={{ backgroundImage: `url(${backgroundHome})` }}
       className="
-        flex flex-col items-center gap-3
+        flex 
+        flex-col 
+        items-center 
+        gap-3
         min-h-[calc(100vh-96px)]
         pb-8 px-[4%]
         pt-[clamp(0px,5vw,32px)]

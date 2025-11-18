@@ -5,11 +5,22 @@ import imgCard3 from '../img/trending/card3.png';
 
 const TrendingCard = () => {
   return (
-    <section>
+    <section 
+    className='
+    py-8 px-[4%]
+    flex
+    flex-col
+    items-center
+    gap-8
+    min-h-[clamp(100vh-96)]
+    '>
      
      <img
      src={imgCard1}
      alt='card1'
+     className='
+     relative
+     '
       />
 
       <img
