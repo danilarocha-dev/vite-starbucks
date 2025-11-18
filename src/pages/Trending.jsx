@@ -1,49 +1,40 @@
 import React from 'react';
-import backgroundTrending from '../img/background-mobile.png';
 import TrendingCard from '../components/TrendingCard';
+import backgroundTrending from '../img/background-mobile.png';
+import card1 from '../img/trending/card1.png'
+import card2 from '../img/trending/card2.png'
+import card3 from '../img/trending/card3.png'
 
 
 
-function Trending() {
+const Trending = () => {
   return (
     <section 
     id="trending" 
     style={{ backgroundImage: `url(${backgroundTrending})` }}
-    className="
-    flex flex-col items-center gap-3
-    min-h-[calc(100vh-96px)]
-    pb-8 px-[4%]
+    className="py-[32px] px-[4%] flex flex-col gap-3 items-center min-h-[calc(100vh-96px)]
     pt-[clamp(0px,5vw,32px)]
     bg-cover bg-no-repeat bg-center
     ">
-      
-      {/* title */}
-      <h2 className="
-      text-[2.5rem]
-      uppercase
-      text-neutral-8
-      font-bold 
-      text-center 
-      relative          /* position: relative (necessário para o span) */
-      mb-8"
-      
-      >
-        Em alta
-        <span className='
-        block
-        w-[60px]
-        h-[4px]
-        bg-primary-1
-        rounded-[30px]
-        absolute
-        bottom-0
-        left-1/2
-        -translate-x-1/2'>
 
-        </span>
-        </h2>
+      <div className=' flex flex-col gap-8'>
 
-      <TrendingCard />
+      <TrendingCard
+      imgSrc={card1}
+      title="Cappuccino"
+      flavor="Avelã" />
+
+      <TrendingCard
+      imgSrc={card2}
+      title="Cappuccino"
+      flavor="Pistache" />
+
+      <TrendingCard
+      imgSrc={card3}
+      title="Cappuccino"
+      flavor="Morango" />
+
+      </div>
 
     </section>
   );

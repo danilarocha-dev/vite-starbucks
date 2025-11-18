@@ -1,38 +1,36 @@
 import React from 'react'
-import imgCard1 from '../img/trending/card1.png';
-import imgCard2 from '../img/trending/card2.png';
-import imgCard3 from '../img/trending/card3.png';
 
-const TrendingCard = () => {
+// Aceita props para tornar o card reutilizável para os 3 sabores
+const TrendingCard = ({imgSrc, title, flavor }) => {
   return (
-    <section 
-    className='
-    py-8 px-[4%]
-    flex
-    flex-col
-    items-center
-    gap-8
-    min-h-[clamp(100vh-96)]
-    '>
-     
-     <img
-     src={imgCard1}
-     alt='card1'
-     className='
-     relative
-     '
-      />
+    // Equivalente a .trending-card { position: relative; }
+    <section className='relative'>
+      
+      {/* Container da Imagem e Nota */}
+      <div className="relative">
+        {/* Imagem: width clamp replicado com valor arbitrário */}
+        <img 
+          src={imgSrc} 
+          alt={`${title} ${flavor}`} 
+          className="w-[clamp(300px,5vw,600px)] rounded-lg" 
+        />
 
-      <img
-     src={imgCard2}
-     alt='card1'
-      />
+        {/* Equivalente a .trending-rate */}
+        <div className="bg-neutral-0 absolute bottom-[70px] right-[30px] py-[5px] px-[10px] rounded-[5px]" >
+          <p className="flex items-center gap-1 font-semibold text-neutral-8">
+            5 <i className="fa-solid fa-star text-secundary-1 "></i>
+          </p>
+        </div>
+      </div>
 
-      <img
-     src={imgCard3}
-     alt='card1'
-      />
-     
+      {/* Equivalente a .trending-card-description */}
+      <div className="flex flex-col text-center text-[1.3rem] font-semibold text-neutral-8 mt-1">
+        
+        {title}
+        <span className="text-[1rem] font-medium text-neutral-7">
+          {flavor}
+        </span>
+      </div>
 
     </section>
   )

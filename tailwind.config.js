@@ -25,7 +25,7 @@ export default {
         'primary-1': '#34815d',
         'primary-2': '#2c6e4f',
         'primary-3': '#245c42',
-        'secondary-1': '#f5c518',
+        'secundary-1': '#f5c518',
       }
     },
   },
