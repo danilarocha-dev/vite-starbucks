@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .bg-app-theme {
+    /* Configuração Mobile (Padrão) */
+    background-image: url('./img/background-mobile.png');
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+
+  /* Configuração Desktop (min-width: 768px) */
+  @media (min-width: 768px) {
+    .bg-app-theme {
+      background-image: url('./img/background-desktop.png');
+      background-size: cover; /* No desktop muda para cover */
+      background-position: left top; /* Position start */
+    }
+  }
+}

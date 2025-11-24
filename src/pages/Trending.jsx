@@ -1,23 +1,28 @@
 import React from 'react';
 import TrendingCard from '../components/TrendingCard';
-import backgroundTrending from '../img/background-mobile.png';
 import card1 from '../img/trending/card1.png'
 import card2 from '../img/trending/card2.png'
 import card3 from '../img/trending/card3.png'
-
-
 
 const Trending = () => {
   return (
     <section 
     id="trending" 
-    style={{ backgroundImage: `url(${backgroundTrending})` }}
-    className="py-[32px] px-[4%] flex flex-col gap-3 items-center min-h-[calc(100vh-96px)]
-    pt-[clamp(0px,5vw,32px)]
-    bg-cover bg-no-repeat bg-center
+    className="
+    bg-app-theme /* Nova classe CSS */
+    py-[32px] px-[4%] 
+    flex flex-col items-center
+    gap-8 
+    min-h-[calc(100vh-96px)] 
+    md:justify-center
     ">
 
-      <div className=' flex flex-col gap-8'>
+      <div className='
+      flex flex-col gap-8
+      w-full items-center
+      md:flex-row 
+      md:flex-wrap 
+      md:justify-center md:gap-6'>
 
       <TrendingCard
       imgSrc={card1}
