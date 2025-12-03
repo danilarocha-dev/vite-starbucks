@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AboutInfo = ({ title, highlightedTitle, description, highlightedDescription, className = '' }) => {
+const AboutInfo = ({ title, highlightedTitle, description, highlightedDescription, descriptionSuffix, className = '' }) => {
  
   return (
     <div className={`p-7 rounded-[20px] bg-primary-1 shadow-md ${className}`}>
@@ -14,6 +14,7 @@ const AboutInfo = ({ title, highlightedTitle, description, highlightedDescriptio
         {highlightedDescription && (
           <span className="text-secundary-1 font-semibold"> {highlightedDescription}</span>
         )}
+        {descriptionSuffix}
       </p>
     </div>
   );
