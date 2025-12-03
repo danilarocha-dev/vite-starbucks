@@ -1,5 +1,4 @@
 import React from 'react';
-import backgroundHome from '../img/background-home.png';
 import homeDetail from '../img/detail.png';
 
 
@@ -8,8 +7,8 @@ function Home() {
     // #home
     <section
       id="home"
-      style={{ backgroundImage: `url(${backgroundHome})` }}
       className="
+        bg-app-theme /* Nova classe CSS */
         flex 
         flex-col 
         items-center 
@@ -57,7 +56,7 @@ function Home() {
           text-center
           text-base
           font-medium
-          max-w-[600px]
+          max-w-[500px]
         "
       >
         Descubra cafés icônicos, sabores únicos e a energia perfeita para cada
