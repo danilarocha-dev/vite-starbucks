@@ -7,7 +7,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="p-[32px] px-[4%] flex flex-col items-center bg-primary-1 min-h-[calc(100vh-96px)] shadow-lg rounded-[32px] bg-cover bg-center xl: [4%] xl:justify-center overflow-hidden"
+      className="p-[32px] px-[4%] flex flex-col items-center bg-primary-1 min-h-[calc(100vh-96px)] shadow-lg rounded-[32px] bg-cover bg-center xl: [4%] xl:justify-center"
       style={{ backgroundImage: `url(${bgAbout})` }}
     >
 
@@ -15,11 +15,11 @@ const AboutSection = () => {
       <div className="flex flex-col items-center gap-6 xl:flex-row xl:items-center xl:gap-12 w-full max-w-7xl">
         
         {/* Imagem Central (No Desktop, order-2 para ficar no meio visualmente, 
-            mas ajustaremos a ordem dos irmãos para obter o efeito sanduíche: Info - Imagem - Info) */}
+            mas ajustei a ordem dos irmãos para obter o efeito sanduíche: Info - Imagem - Info) */}
         <img
           src={aboutUsImg}
-          alt="Copos Starbucks colidindo com splash de leite"
-          className="w-[clamp(300px,50vw,500px)] xl:order-2 drop-shadow-xl z-10"
+          alt="Copos Starbucks"
+          className="w-[clamp(300px,50vw,500px)] xl:order-2 drop-shadow-xl z-1"
         />
 
         {/* Card 1: Nossa História */}
