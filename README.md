@@ -45,7 +45,7 @@ Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
 npm run dev
 ```
 
-Abra [http://localhost:5173](http://localhost:5173) em seu navegador para ver a aplicação.
+Abra [http://localhost:5173](http://localhost:5173/) em seu navegador para ver a aplicação.
 
 ## 📜 Scripts Disponíveis
 

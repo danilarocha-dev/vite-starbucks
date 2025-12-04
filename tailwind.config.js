@@ -22,9 +22,11 @@ export default {
         'neutral-7': '#3e2e25',
         'neutral-8': '#1e0e05',
         'neutral-9': '#000000',
+
         'primary-1': '#34815d',
         'primary-2': '#2c6e4f',
         'primary-3': '#245c42',
+        
         'secundary-1': '#f5c518',
       }
     },
