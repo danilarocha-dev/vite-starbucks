@@ -1,11 +1,9 @@
 import React from 'react';
 import homeDetail from '../img/detail.png';
 
-
 function Home() {
   return (
-    <section
-      id="home"
+    <section id="home"
       className="bg-app-theme flex flex-col items-center gap-3 min-h-[calc(100vh-96px)] pb-8 px-[4%] pt-[clamp(0px,5vw,32px)] bg-cover bg-no-repeat bg-center"
     >
 
@@ -30,8 +28,7 @@ function Home() {
       <p
         className="text-neutral-9 text-center text-base font-medium max-w-[500px]"
       >
-        Descubra cafés icônicos, sabores únicos e a energia perfeita para cada
-        momento do seu dia.
+        Descubra cafés icônicos, sabores únicos e a energia perfeita para cada momento do seu dia.
       </p>
     </section>
   );

@@ -5,6 +5,9 @@ import aboutUsImg from '../img/about/about-us.png';
 
 const AboutSection = () => {
   return (
+    
+    <div className='bg-app-theme w-full min-h-[calc(100vh-96px)] flex items-center justify-center py-8'>
+
     <section id="about"
       className="relative flex flex-col items-center min-h-[calc(100vh-96px)] p-8 px-[4%] mt-4 bg-primary-1 bg-center rounded-[32px] shadow-lg overflow-hidden xl:m-[4%] xl:justify-center"
       style={{ backgroundImage: `url(${bgAbout})` }}
@@ -48,6 +51,7 @@ const AboutSection = () => {
 
       </div>
     </section>
+    </div>
   );
 };
 
