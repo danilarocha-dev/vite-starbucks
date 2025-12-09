@@ -1,53 +1,66 @@
 import React from 'react';
-import ProductCard from '../components/ProductCard.jsx';
-import product1 from '../img/products/1.png';
-import product2 from '../img/products/2.png';
-import product3 from '../img/products/3.png';
-import product4 from '../img/products/4.png';
+import ProductCard from '../components/ProductCard';
 
-const PRODUCTS_DATA = [
-  {
-    id: 1,
-    imagePath: product1,
-    title: 'Moccha',
-    subtitle: 'Chocolate',
+// Dados mockados dos 4 cards
+const productsData = [
+  { 
+    id: 1, 
+    imgSrc: '/images/cafe-gelado.jpg', 
+    title: 'Café Gelado Premium', 
+    subtitle: 'O Clássico Refrescante',
+    description: 'Nosso blend especial servido com gelo, perfeito para dias quentes e energizantes. Uma escolha popular!', 
+    price: 15.00 
   },
-  {
-    id: 2,
-    imagePath: product2,
-    title: 'Moccha',
-    subtitle: 'Morango',
+  { 
+    id: 2, 
+    imgSrc: '/images/mocha.jpg',
+    title: 'Mocha de Caramelo', 
+    subtitle: 'Doce e Envolvente',
+    description: 'Combinação rica de chocolate, espresso, leite vaporizado e uma cobertura de caramelo, irresistível.', 
+    price: 18.90 
   },
-  {
-    id: 3,
-    imagePath: product3,
-    title: 'Moccha',
-    subtitle: 'Café',
+  { 
+    id: 3, 
+    imgSrc: '/images/frappe.jpg', 
+    title: 'Frappuccino de Baunilha', 
+    subtitle: 'A Lenda Cremosa',
+    description: 'Bebida batida com gelo e um toque intenso de baunilha, finalizada com chantilly e calda.', 
+    price: 21.50 
   },
-  {
-    id: 4,
-    imagePath: product4,
-    title: 'Moccha',
-    subtitle: 'Manga',
+  { 
+    id: 4, 
+    imgSrc: '/images/sanduiche.jpg',
+    title: 'Sanduíche de Queijo e Presunto', 
+    subtitle: 'Para Acompanhar',
+    description: 'Opção de lanche leve e saboroso, feito na chapa e ideal para um café da manhã ou tarde.', 
+    price: 12.00 
   },
 ];
 
-function Products () {
-
+function Products() {
   return (
-    <section id="products"
-    className="bg-app-theme p-8 px-[4%] flex flex-col items-center gap-8"
-    >
-      
-     <div className="products-cards">
-        {PRODUCTS_DATA.map((product) => (
-          <ProductCard
-            key={product.id} // Importante para o React (listas)
-            imagePath={product.imagePath}
-            title={product.title}
-            subtitle={product.subtitle}
-          />
-        ))}
+    <section className="bg-app-theme min-h-screen pt-20 bg-primary-1">
+      <div className="container mx-auto px-4 py-8">
+        
+        {/* Título da Página */}
+        <h1 className="text-4xl font-extrabold text-neutral-8 text-center mb-10 border-b-4 border-[#00704A] pb-3 inline-block mx-auto">
+          Nosso Menu Completo
+        </h1>
+
+        {/* Grade de Produtos (products-cards) */}
+        <div className="products-cards flex flex-wrap -m-4">
+          {productsData.map((product) => (
+            <ProductCard
+              key={product.id}
+              imgSrc={product.imgSrc}
+              title={product.title}
+              description={product.description}
+              price={product.price}
+              
+            />
+          ))}
+        </div>
+
       </div>
     </section>
   );
