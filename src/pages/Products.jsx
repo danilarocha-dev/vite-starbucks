@@ -1,39 +1,58 @@
 import React from 'react';
 import ProductCard from '../components/ProductCard';
+import product1 from '../img/products/1.png';
+import product2 from '../img/products/2.png';
+import product3 from '../img/products/3.png';
+import product4 from '../img/products/4.png';
+import cardBackground from "../img/products/background.png";
+
+// Componente simples para replicar o estilo do título (adaptado de steps anteriores)
+const SectionTitle = ({ children }) => {
+    
+    return (
+        <h2 className="text-[2.5rem] uppercase text-[#1e0e05] font-bold relative pb-1">
+            {children}
+            <span
+                className="block w-[60px] h-1 bg-[#34815d] absolute bottom-0 rounded-full"
+                aria-hidden="true"
+            ></span>
+        </h2>
+    );
+};
 
 // Dados mockados dos 4 cards
 const productsData = [
   { 
     id: 1, 
-    imgSrc: '/images/cafe-gelado.jpg', 
-    title: 'Café Gelado Premium', 
+    imgSrc: product1, 
+    title: 'Moccha Chocolate', 
     subtitle: 'O Clássico Refrescante',
-    description: 'Nosso blend especial servido com gelo, perfeito para dias quentes e energizantes. Uma escolha popular!', 
-    price: 15.00 
+    description: 'Combinação rica de chocolate, espresso, leite vaporizado e uma cobertura de caramelo, irresistível.', 
+    price: 20.00 
   },
   { 
     id: 2, 
-    imgSrc: '/images/mocha.jpg',
-    title: 'Mocha de Caramelo', 
+    imgSrc: product2,
+    title: 'Moccha Morango', 
     subtitle: 'Doce e Envolvente',
-    description: 'Combinação rica de chocolate, espresso, leite vaporizado e uma cobertura de caramelo, irresistível.', 
+    description: 'A combinação surpreendente de café com a doçura e acidez do morango.', 
     price: 18.90 
   },
   { 
     id: 3, 
-    imgSrc: '/images/frappe.jpg', 
-    title: 'Frappuccino de Baunilha', 
+    imgSrc: product3, 
+    title: 'Moccha Café', 
     subtitle: 'A Lenda Cremosa',
-    description: 'Bebida batida com gelo e um toque intenso de baunilha, finalizada com chantilly e calda.', 
+    description: 'Para quem ama café em dobro! Um moccha puro e intenso com camadas de espresso, leite e caramelo, garantindo um sabor potente e aveludado, ideal para um despertar.', 
     price: 21.50 
   },
   { 
     id: 4, 
-    imgSrc: '/images/sanduiche.jpg',
-    title: 'Sanduíche de Queijo e Presunto', 
+    imgSrc: product4,
+    title: 'Moccha Manga', 
     subtitle: 'Para Acompanhar',
-    description: 'Opção de lanche leve e saboroso, feito na chapa e ideal para um café da manhã ou tarde.', 
-    price: 12.00 
+    description: 'Uma explosão tropical. O sabor exótico e suculento da manga misturado com a cremosidade do moccha, coberto com chantilly e calda de caramelo. Uma novidade vibrante.', 
+    price: 22.90 
   },
 ];
 
