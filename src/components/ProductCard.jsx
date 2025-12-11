@@ -1,50 +1,53 @@
 import React from 'react';
 
+function ProductCard({ imgSrc, cardBackground, main, flavor, description, }) {
+  
+  const cardContainerStyle = {
+    backgroundImage: `url(${cardBackground})`,
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+  };
 
-function ProductCard({ imgSrc, title, description, price }) {
-  // Formata o preço para o padrão brasileiro (R$ X.XXX,XX)
-  const formattedPrice = price.toLocaleString('pt-BR', {
-    style: 'currency',
-    currency: 'BRL',
-  });
+  const imageStyle = {
+        top: "-70px", 
+        filter: "drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2))",
+    };
 
   return (
-    <section className="product-card w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4">
+    <section className="w-full max-w[332px] md:max-w-[300px]">
+
       {/* Container do Card */}
-      <div className="product-content bg-white shadow-lg rounded-xl overflow-hidden transform transition duration-500 hover:scale-[1.03] hover:shadow-xl">
+      <div className="flex flex-col items-center justify-center p-4 rounded-[50px] bg-primary-1 bg-cover bg-no-repeat bg-center"
+      style={cardContainerStyle}
+      >
         
-        {/* Imagem */}
-        <div className="product-image h-48 sm:h-56 overflow-hidden">
-          {/* A classe 'object-cover' garante que a imagem cubra o espaço mantendo a proporção */}
+        {/* Imagem (replicando o estilo da imagem flutuante) */}
+        <div className="product-image w-full flex justify-center">
           <img 
             src={imgSrc} 
-            alt={title} 
-            className="w-full h-full object-cover transition duration-300 hover:opacity-90"
+            alt={`${main} ${flavor}`}
+            // width: 300px (mobile) | width: 250px (desktop)
+            className="relative w-[300px] md:w-[250px]"
+            style={imageStyle}
           />
         </div>
 
         {/* Conteúdo do Texto */}
         <div className="p-4 flex flex-col justify-between h-[calc(100%-12rem)] sm:h-[calc(100%-14rem)]"> 
+
           <div>
-            <h3 className="text-lg font-bold text-gray-800 mb-1 leading-snug truncate" title={title}>
-              {title}
+            <h3 className="text-neutral-0 text-[1.8rem] font-bold flex flex-col items-center ">
+              {main}
             </h3>
-            <p className="text-sm text-gray-500 mb-4 h-10 overflow-hidden line-clamp-2">
+
+            <span className='text-secundary-1 text-[1.2rem] font-medium'>
+              {flavor}
+            </span>
+
+            <p className="text-sm text-neutral-0 mb-4 h-10 overflow-hidden line-clamp-2">
               {description}
             </p>
           </div>
           
-          <div className="flex justify-between items-center mt-2">
-            <span className="text-xl font-extrabold text-[#00704A]">
-              {formattedPrice}
-            </span>
-            <button 
-              className="bg-[#00704A] text-white py-1 px-3 rounded-full text-sm font-semibold hover:bg-[#005c3c] transition duration-200"
-              aria-label={`Adicionar ${title} ao carrinho`}
-            >
-              Adicionar
-            </button>
-          </div>
         </div>
       </div>
     </section>
