@@ -35,15 +35,12 @@ function ProductCard({ imgSrc, cardBackground, main, flavor, description, }) {
         <div className="p-4 flex flex-col justify-between h-[calc(100%-12rem)] sm:h-[calc(100%-14rem)]"> 
 
           <div>
-            <h3 className="text-neutral-0 text-[1.8rem] font-bold flex flex-col items-center ">
-              {main}
+            <h3 className="text-neutral-0 text-[1.8rem] font-bold flex items-center ">
+              {main} <span className='text-secundary-1 text-[1.8rem] font-medium ml-2'>{flavor}</span>
             </h3>
 
-            <span className='text-secundary-1 text-[1.2rem] font-medium'>
-              {flavor}
-            </span>
 
-            <p className="text-sm text-neutral-0 mb-4 h-10 overflow-hidden line-clamp-2">
+            <p className="text-sm text-neutral-0 mb-4 line-clamp-6">
               {description}
             </p>
           </div>
