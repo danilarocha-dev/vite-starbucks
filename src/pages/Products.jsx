@@ -28,7 +28,7 @@ const productsData = [
     imgSrc: product1, 
     main: 'Moccha',
     flavor: 'Chocolate', 
-    description: 'Combinação rica de chocolate, espresso, leite vaporizado e uma cobertura de caramelo, irresistível.', 
+    description: 'Uma experiência intensa. O equilíbrio perfeito entre chocolate encorpado, espresso marcante e leite vaporizado, finalizado com caramelo. Um clássico irresistível.', 
   },
 
   { 
@@ -36,7 +36,7 @@ const productsData = [
     imgSrc: product2,
     main: 'Moccha', 
     flavor: 'Morango',
-    description: 'A combinação surpreendente de café com a doçura e acidez do morango.',  
+    description: 'Uma combinação surpreendente. O contraste do café com a doçura suave e a leve acidez do morango cria uma experiência única. Um sabor inesperado.',  
   },
 
   { 
@@ -44,7 +44,7 @@ const productsData = [
     imgSrc: product3, 
     main: 'Moccha', 
     flavor: 'Café',
-    description: 'Para quem ama café em dobro! Um moccha puro e intenso com camadas de espresso, leite e caramelo, garantindo um sabor potente e aveludado, ideal para um despertar.',   
+    description: 'Para os amantes de café. Camadas intensas de espresso, leite cremoso e caramelo realçam a força do moccha. Um sabor puro e marcante.',   
   },
 
   { 
@@ -52,7 +52,7 @@ const productsData = [
     imgSrc: product4,
     main: 'Moccha', 
     flavor: 'Manga',
-    description: 'Uma explosão tropical. O sabor exótico e suculento da manga misturado com a cremosidade do moccha, coberto com chantilly e calda de caramelo. Uma novidade vibrante.', 
+    description: 'Uma explosão tropical de sabores. O sabor exótico e suculento da manga misturado com a cremosidade do moccha. Uma novidade vibrante.', 
     
   },
 ];
@@ -63,11 +63,6 @@ function Products() {
     className="bg-app-theme flex flex-col items-center gap-[58px] py-12 px-[-8%] md-min-h-screen md:gap-[78px]">
 
       <div className="container mx-auto px-4 py-8">
-        
-        {/* Título da Página */}
-        <h1 className="text-4xl font-extrabold text-neutral-8 text-center mb-10 border-b-4 border-[#00704A] pb-3 inline-block mx-auto">
-          Nosso Menu Completo
-        </h1>
 
         {/* Grade de Produtos (products-cards) */}
         <div className="products-cards flex flex-col gap-[58px] md:flex-row md:flex-wrap md:justify-center md:gap-6">

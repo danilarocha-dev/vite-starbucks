@@ -13,10 +13,10 @@ function ProductCard({ imgSrc, cardBackground, main, flavor, description, }) {
     };
 
   return (
-    <section className="w-full max-w[332px] md:max-w-[300px]">
+    <div className="w-full max-w[332px] md:max-w-[300px]">
 
       {/* Container do Card */}
-      <div className="flex flex-col items-center justify-center p-4 rounded-[50px] bg-primary-1 bg-cover bg-no-repeat bg-center"
+      <div className="flex flex-col items-center justify-center p-4 pb-8 rounded-[50px] bg-primary-1 bg-cover bg-no-repeat bg-center"
       style={cardContainerStyle}
       >
         
@@ -26,28 +26,26 @@ function ProductCard({ imgSrc, cardBackground, main, flavor, description, }) {
             src={imgSrc} 
             alt={`${main} ${flavor}`}
             // width: 300px (mobile) | width: 250px (desktop)
-            className="relative w-[300px] md:w-[250px]"
+            className="relative -top-[70px] w-[300px] md:w-[250px] drop-shadow-[2px_4px_6px_rgba(0,0,0,0.2)]"
             style={imageStyle}
           />
         </div>
 
         {/* Conteúdo do Texto */}
-        <div className="p-4 flex flex-col justify-between h-[calc(100%-12rem)] sm:h-[calc(100%-14rem)]"> 
+        <div className="flex flex-col items-center mt-[-70px] text-center"> 
 
-          <div>
-            <h3 className="text-neutral-0 text-[1.8rem] font-bold flex items-center ">
-              {main} <span className='text-secundary-1 text-[1.8rem] font-medium ml-2'>{flavor}</span>
+            <h3 className="text-neutral-0 font-poppins text-[1.8rem] leading-tight font-bold flex items-center mb-4">
+              {main} <span className='text-secundary-1 text-[1.8rem] font-medium normal-case ml-2'>{flavor}</span>
             </h3>
 
-
-            <p className="text-sm text-neutral-0 mb-4 line-clamp-6">
+            <p className="text-base text-neutral-0 font-poppins leading-relaxed px-2">
               {description}
             </p>
-          </div>
+          
           
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
