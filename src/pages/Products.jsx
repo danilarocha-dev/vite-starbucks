@@ -60,7 +60,7 @@ const productsData = [
 function Products() {
   return (
     <section id='products' 
-    className="bg-app-theme flex flex-col items-center gap-[58px] py-12 px-[-8%] md-min-h-screen md:gap-[78px]">
+    className="bg-app-theme flex flex-col items-center gap-3 min-h-[calc(95vh-96px)] py-16 px-[-8%] md-min-h-screen md:gap-[78px]">
 
       <div className="container mx-auto px-4 py-8">
 
